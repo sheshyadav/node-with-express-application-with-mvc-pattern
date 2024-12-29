@@ -1,0 +1,19 @@
+<% layout('../layouts/app') %>
+<section class="vh-100">
+    <div class="container h-100">
+        <div class="row d-flex px-2 justify-content-center align-items-center h-100">
+            <section class="card py-5">
+                <div class="col-md-12 text-center">
+                    <h2 class="fw-bold">Internal Server Error</h2>
+                    <p class="h2 text-danger">Oops! <%= error %>.</p>
+                    <button class="btn btn-theme text-light" onclick="history.back()">
+                    <i class="fa-solid fa-arrow-left"></i> Go Back
+                    </button>
+                </div><!-- /col -->
+            </section>
+        </div>
+    </div>
+</section>
+
+
+

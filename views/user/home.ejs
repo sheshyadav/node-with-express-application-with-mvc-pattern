@@ -1,0 +1,24 @@
+<% layout('../layouts/app') %>
+
+<!-- Home Page body section start -->
+<!--Main Navigation-->
+<header>
+  <!-- Top Navbar section inculde -->
+  <%- partial('../layouts/user/top-navbar') %>
+  <!-- Top Navbar section inculde -->
+</header>
+<!--Main Navigation-->
+
+<!--Main layout-->
+<section class="container mt-5" id="chatpageSection" data-user="<%=user.id%>">
+  <section class="pt-2">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+      </div>
+    </div>
+  </section>
+</section>
+<!--Main layout-->
+<% script(asset_path('js/socket.io.js')) -%>
+<% script(asset_path('js/socket.config.js')) -%>
+<!-- Home Page body section end -->

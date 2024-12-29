@@ -1,0 +1,189 @@
+:root {
+  --theme: #380c56;
+  --theme-light: #f6f3f8;
+  --theme2: #b52e84;
+  --thememix: linear-gradient(45deg, #380c56, #b52e84);
+  --white: #fff;
+  --black: #000;
+}
+/* 56, 12, 86 **/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px !important;
+  height: 2px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb {
+  background: var(--theme);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-check-input[type="checkbox"]:checked {
+  background-color: var(--theme) !important;
+}
+
+.form-check-input:checked:focus {
+  border-color: var(--theme) !important;
+}
+
+body {
+  background-color: #edebeb;
+}
+.pointer {
+  cursor: pointer !important;
+}
+.bg-theme {
+  background-color: var(--theme) !important;
+}
+.btn-theme {
+  background-color: var(--theme) !important;
+}
+
+.btn-outline-theme {
+  background-color: transparent;
+  color: var(--theme);
+}
+
+.btn-outline-theme:hover {
+  color: var(--theme);
+  background-color: var(--theme-light);
+}
+
+.text-theme {
+  color: var(--theme) !important;
+}
+
+/*
+|--------------------------------------------------
+|   <!--- navbar and side css start ---!>
+|--------------------------------------------------
+*/
+
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+#sidebarMenu .position-sticky .list-group.list-group-flush {
+  height: 100vh;
+  overflow: auto;
+}
+
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.nav-link.active {
+  text-decoration: underline;
+  color: var(--theme2);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .active {
+  background-color: var(--theme) !important;
+  border-color: var(--theme) !important;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: var(--black) !important;
+  border-color: var(--theme) !important;
+  background-color: rgba(56, 12, 86, 0.2);
+}
+
+.nav-tabs .nav-link {
+  --mdb-nav-tabs-link-padding-top: 10px;
+  --mdb-nav-tabs-link-padding-bottom: 10px;
+}
+
+.chat-box-height {
+  height: calc(100vh - 103px);
+  overflow: auto;
+}
+/*
+|--------------------------------------------------
+|   <!--- navbar and side css end ---!>
+|--------------------------------------------------
+*/
+
+/*
+|--------------------------------------------------
+|   <!--- User profile section css ---!>
+|--------------------------------------------------
+*/
+.profile-image-box {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-image-box .profile-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile-image-box .profile-image-box-action-button {
+  position: absolute;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+}
+
+.profile-image-box:hover .profile-image-box-action-button {
+  top: 0%;
+}

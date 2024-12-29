@@ -1,0 +1,45 @@
+<% layout('../layouts/app') %>
+<% stylesheet(asset_path('css/animate.min.css')) -%>
+
+<!-- Home Page body section start -->
+<section class="vh-100">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <% if(typeof success!=='undefined'){ %>
+        <div class="alert alert-success animate__animated animate__bounceIn"><%=success%></div>
+        <% } %>
+        <% if(typeof error!=='undefined'){ %>
+        <div class="alert alert-danger animate__animated animate__shakeX"><%=error%></div>
+        <% } %>
+        
+          <div class="card shadow-2-strong rounded">
+            <div class="card-body p-5">        
+                <h3 class="mb-5 fw-bold text-theme text-center">Account Verify</h3>
+                <h5 class="fw-bold text-theme">Verify Your Email Address!</h5>
+                <div class="">
+                    <p class="fw-bold">
+                        A fresh verification link has been sent to your email address.<br/>
+                        Before proceeding, please check your email for a verification link.
+                    </p>
+                    <p class="fw-bold">
+                        If you did not receive the email.
+                    </p>
+                </div>
+                <form action="<%=url('email/resend')%>" method="post">
+                  <input type="hidden" name="_token" value="<%=csrfToken%>" />
+                    <button data-mdb-ripple-init 
+                        class="btn btn-theme btn-lg btn-block text-light mt-4" 
+                        type="submit">
+                        Click here to request another
+                    </button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- Home Page body section end -->
+
+

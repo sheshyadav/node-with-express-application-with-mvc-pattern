@@ -1,0 +1,62 @@
+<% layout('../layouts/app') %>
+
+<!-- Home Page body section start -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0">
+        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo" loading="lazy" />
+      </a>
+      <!-- Left links -->
+      <div class="d-md-flex justify-content-center w-100">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="<%=url('about')%>">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="<%=url('pricing')%>">Pricing</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <% if(typeof user!=='undefined' && user.role==0){ %>
+      <a href="<%=url('admin/dashboard')%>" data-mdb-ripple-init class="btn btn-link mx-3 btn-outline-theme px-3 btn-rounded">
+        Dashboard
+      </a>
+      <% }else if(typeof user!=='undefined' && user.role==1) { %>
+      <a href="<%=url('user/dashboard')%>" data-mdb-ripple-init class="btn btn-link mx-3 btn-outline-theme px-3 btn-rounded">
+        Dashboard
+      </a>
+      <% }else if(typeof user=='undefined' ) { %>
+      <a href="<%=url('login')%>" data-mdb-ripple-init class="btn btn-link mx-3 btn-outline-theme px-3 btn-rounded">
+        Sign in
+      </a>
+      <a href="<%=url('register')%>" data-mdb-ripple-init class="btn btn-theme text-light btn-rounded">
+        Try for free
+      </a>
+      <% } %>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+<div class="container">
+  
+</div>
+<!-- Home Page body section end -->

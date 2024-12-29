@@ -1,0 +1,41 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "storage:link": "node app/services/storage-link.js",
+    "session:clear": "node app/services/session-clear.js"
+  },
+  "author": "Shesh Yadav",
+  "license": "ISC",
+  "description": "Simple chat aaplication using socket.io",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "bullmq": "^5.10.4",
+    "cookie-parser": "^1.4.6",
+    "csrf-csrf": "^3.0.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.1.0",
+    "ioredis": "^5.4.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.10.1",
+    "nodemailer": "^6.9.14",
+    "sequelize": "^6.37.3",
+    "sequelize-cli": "^6.6.2",
+    "session-file-store": "^1.5.0",
+    "uuid": "^10.0.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
